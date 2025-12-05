@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-this-alias */
 import { Schema, model } from "mongoose"
-import { IUser } from "./user.interface.js"
-const UserSchema = new Schema<IUser>(
+import { IDoctor } from "./doctor.interface"
+
+const DoctorSchema = new Schema<IDoctor>(
   {
     id: {
       type: String,
@@ -16,14 +17,17 @@ const UserSchema = new Schema<IUser>(
       type: String,
       required: true,
     },
-    password: {
+    speciality: {
       type: String,
       required: true,
     },
-    email: {
+    Designation: {
       type: String,
       required: true,
-      unique: true,
+    },
+    Degree: {
+      type: String,
+      required: true,
     },
   },
   {
@@ -34,4 +38,4 @@ const UserSchema = new Schema<IUser>(
   }
 )
 
-export const User = model<IUser>("User", UserSchema)
+export const Doctor = model<IDoctor>("Doctor", DoctorSchema)

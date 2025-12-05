@@ -1,8 +1,16 @@
 import { IUser } from "./user.interface"
-import { UserModel } from "./user.model"
+import { User } from "./user.model"
 
-export const createUser = async (user: Partial<IUser>): Promise<IUser> => {
-  const newUser = new UserModel(user)
-  await newUser.save()
+const createUser = async (user: IUser) => {
+  const newUser = await User.create(user)
   return newUser
+}
+const getAllUsers = async () => {
+  const users = await User.find()
+  return users
+}
+
+export const userService = {
+  createUser,
+  getAllUsers,
 }
