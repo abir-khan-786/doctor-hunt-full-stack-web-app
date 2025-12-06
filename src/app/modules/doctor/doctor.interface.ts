@@ -5,6 +5,6 @@ export type IDoctor = {
   name: string
   role: string
   speciality: string
-  Designation: string
-  Degree: string
+  designation: string
+  degree: string
 }

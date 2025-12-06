@@ -15,6 +15,7 @@ const UserSchema = new Schema<IUser>(
     role: {
       type: String,
       required: true,
+      enum: ["doctor", "admin", "patient"],
     },
     password: {
       type: String,

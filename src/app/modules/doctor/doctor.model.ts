@@ -16,16 +16,17 @@ const DoctorSchema = new Schema<IDoctor>(
     role: {
       type: String,
       required: true,
+      enum: ["doctor", "admin", "patient"],
     },
     speciality: {
       type: String,
       required: true,
     },
-    Designation: {
+    designation: {
       type: String,
       required: true,
     },
-    Degree: {
+    degree: {
       type: String,
       required: true,
     },
