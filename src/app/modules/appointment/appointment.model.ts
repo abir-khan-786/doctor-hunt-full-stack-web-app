@@ -1,4 +1,4 @@
-import { Schema } from "mongoose"
+import { model, Schema } from "mongoose"
 import { IAppointment } from "./appointment.interface"
 
 const AppointmentModel = new Schema<IAppointment>({
@@ -30,3 +30,7 @@ const AppointmentModel = new Schema<IAppointment>({
   createdAt: { type: String, default: Date.now },
   updatedAt: { type: String, default: Date.now },
 })
+
+const Appointment = model<IAppointment>("Appointment", AppointmentModel)
+
+export { Appointment }
