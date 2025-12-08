@@ -4,11 +4,11 @@ export interface IAppointment {
 
   // Patient Info
   patient: {
-    userId?: string
+    userId: string
     name: string
     phone: string
-    email?: string
-    gender?: "male" | "female" | "other"
+    email: string
+    gender: "male" | "female" | "other"
     age?: number
   }
 
@@ -32,9 +32,9 @@ export interface IAppointment {
 
   // Payment Info
   payment?: {
-    method?: "bkash" | "nagad" | "rocket" | "card" | "cash"
-    amount?: number
-    transactionId?: string
+    method: "bkash" | "nagad" | "rocket" | "card" | "cash"
+    amount: number
+    transactionId: string
     status?: "paid" | "unpaid" | "refunded"
   }
 

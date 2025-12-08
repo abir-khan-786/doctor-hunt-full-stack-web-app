@@ -3,7 +3,7 @@ import { appointmentController } from "./appointment.controller"
 
 const appoinmentRouter = express.Router()
 
-appoinmentRouter.get("/")
-appoinmentRouter.post("/create", appointmentController.makeAppointmentFromDB)
+appoinmentRouter.get("/" , appointmentController.allAppointments)
+appoinmentRouter.post("/create", appointmentController.createAppointment)
 
 export default appoinmentRouter
