@@ -1,12 +1,11 @@
-import { IUser } from "./user.interface"
-import { User } from "./user.model"
+import prisma from "../../../shared/prisma"
 
-const createUser = async (user: IUser) => {
-  const newUser = await User.create(user)
+const createUser = async () => {
+  const newUser = await prisma
   return newUser
 }
 const getAllUsers = async () => {
-  const users = await User.find()
+  const users = "adsf"
   return users
 }
 
